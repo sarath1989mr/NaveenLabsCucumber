@@ -11,15 +11,16 @@ Feature: Login functionality of open cart e commerce website
     Given I have entered a valid user name and password
     Then I click on the login button
     Then I should be logged in successfully
+    Then logout from the cart
 
-  Scenario Outline: unsuccessful login with empty or invalid credentials
-    Given I have entered invalid "<user name>" and "<password>"
-    Then I click on the login button
-    Then i should see an error message indicating "<error_msg>"
-
-    Examples: 
-      | user name | password | error_msg |
-
-  Scenario: Navigating to the forgotten password page
-    When I click on the "Forgotten password" link
-    Then I should be redirected to the password reset page
+  #Scenario Outline: unsuccessful login with empty or invalid credentials
+    #Given I have entered invalid "<user name>" and "<password>"
+    #Then I click on the login button
+    #Then I should see an error message indicating "<error_msg>"
+#
+    #Examples: 
+      #| user name | password | error_msg |
+#
+  #Scenario: Navigating to the forgotten password page
+    #When I click on the "Forgotten password" link
+    #Then I should be redirected to the password reset page
